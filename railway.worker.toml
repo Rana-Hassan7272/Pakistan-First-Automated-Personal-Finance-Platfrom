@@ -1,0 +1,9 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "Dockerfile"
+
+[deploy]
+startCommand = "sh scripts/start-worker-only.sh"
+restartPolicyType = "ON_FAILURE"
+healthcheckPath = ""
+healthcheckTimeout = 0

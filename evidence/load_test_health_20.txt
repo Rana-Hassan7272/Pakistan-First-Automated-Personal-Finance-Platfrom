@@ -1,0 +1,11 @@
+Target:      https://finguard-production-0a3c.up.railway.app/health
+Requests:    20
+Concurrency: 20
+------------------------------------------------------------
+Wall time:   1678 ms
+Succeeded:   20/20
+Failed:      0/20
+Latency ms:  min=1030  avg=1321  max=1660
+             p95=1660
+------------------------------------------------------------
+PASS

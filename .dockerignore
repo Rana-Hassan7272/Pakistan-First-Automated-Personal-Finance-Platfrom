@@ -1,0 +1,115 @@
+# Git
+.git
+.gitignore
+.gitattributes
+
+# Python
+__pycache__
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Jupyter
+.ipynb_checkpoints
+*.ipynb
+
+# Logs
+logs/
+*.log
+
+# ML Models (copy specific ones, not all)
+# models/*.pkl
+# models/*.joblib
+
+# Data
+data/
+datasets/
+*.csv
+*.parquet
+
+# MLflow
+mlruns/
+mlflow/
+
+# Docker
+Dockerfile
+docker-compose*.yml
+.dockerignore
+
+# Documentation
+*.md
+docs/
+
+# Node (for frontend later)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Local env files
+.env
+.env.local
+.env.*.local
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+
+# Keep build context very small for backend image
+frontend/
+apps/
+evidence/
+evaluation/bert_inference_latency.py
+evaluation/run_locust_advisor.py
+evaluation/collect_ops_evidence.py
+evaluation/advisor_latency_smoke.py
+infrastructure/
+monitoring/
+supabase/
+.github/
+.cache/
+agent-transcripts/
+
+# Exclude local/generated runtime artifacts
+backend/ml/bert/artifacts/
+backend/ml/lstm/artifacts/
+backend/ml/anomaly/artifacts/
+backend/rag/indices/*.pkl
+backend/rag/indices/*.tmp
+backend/rag/pdfdata/

@@ -1,0 +1,15 @@
+21:32:27  INFO      anomaly.run_pipeline  ── EVAL ──────────────────────────────────────────────────
+21:32:27  INFO      ml.anomaly.models  ModelBundle loaded: scope=global user=None fit_date=2026-05-10 n_training=160619
+21:32:27  INFO      ml.anomaly.jobs  Loading test data from C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\data\processed\anomaly\test.parquet …
+21:37:12  INFO      ml.anomaly.jobs  Confusion matrix — TN=34662 FP=140 FN=27 TP=657
+21:37:12  INFO      backend.ml.mlflow_tracking  MLFLOW_TRACKING_URI is HTTP but server not reachable; using file store file:///C:/Users/PMY/Desktop/ARTIFICIAL%20INTELLIGENCE/MachineLearningProjects/finguard-ai/backend/ml/mlruns (unset MLFLOW_TRACKING_URI to silence, or start mlflow server on that URL).
+21:37:13  INFO      ml.anomaly.jobs  Evaluation results: precision=0.824 recall=0.961 f1=0.887 auprc=0.951
+21:37:13  INFO      anomaly.run_pipeline  ── Results ───────────────────────────────────────────────
+21:37:13  INFO      anomaly.run_pipeline    Precision          : 0.8243  (target > 0.80)
+21:37:13  INFO      anomaly.run_pipeline    Recall             : 0.9605  (target > 0.75)
+21:37:13  INFO      anomaly.run_pipeline    F1                 : 0.8872
+21:37:13  INFO      anomaly.run_pipeline    Average Precision  : 0.9513  (AUPRC)
+21:37:13  INFO      anomaly.run_pipeline    Threshold          : 0.9500
+21:37:13  INFO      anomaly.run_pipeline    Fraud detected     : 797 / 684
+21:37:13  INFO      anomaly.run_pipeline    Gate check         : ✓ PASS
+=== finished 2026-06-01T21:37:14+05:00 exit=0 ===

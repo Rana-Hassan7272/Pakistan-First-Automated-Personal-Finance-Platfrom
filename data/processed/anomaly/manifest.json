@@ -1,0 +1,16 @@
+{
+  "seed": 2024,
+  "version": "1.1.0",
+  "fraud_rate": 0.02,
+  "n_users": 100,
+  "months": 24,
+  "n_total": 234678,
+  "n_fraud": 4601,
+  "n_normal": 230077,
+  "train_size": 163848,
+  "val_size": 35344,
+  "test_size": 35486,
+  "generated_at": "2026-05-10T12:12:07.958679",
+  "feature_schema": "1.0.0",
+  "split_strategy": "by_user_70_15_15"
+}

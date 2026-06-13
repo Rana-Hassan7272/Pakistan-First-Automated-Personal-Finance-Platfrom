@@ -1,0 +1,3 @@
+# Optional Phase 9 load testing (Locust). Not installed in default CI — use:
+#   pip install -r requirements-load.txt
+locust==2.32.6

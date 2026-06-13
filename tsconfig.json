@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "jsx": "react-native",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "strict": true,
+    "noEmit": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "target": "ESNext",
+    "lib": ["DOM", "ESNext"],
+    "resolveJsonModule": true,
+    "baseUrl": "frontend/mobile",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@theme": ["./src/theme/index"],
+      "@services": ["./src/services/api"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@store/*": ["./src/store/*"],
+      "@components/*": ["./src/components/*"]
+    }
+  },
+  "include": [
+    "frontend/mobile/**/*.ts",
+    "frontend/mobile/**/*.tsx",
+    "frontend/mobile/.expo/types/**/*.ts",
+    "frontend/mobile/expo-env.d.ts"
+  ],
+  "exclude": ["node_modules", "frontend/mobile/node_modules"]
+}

@@ -1,0 +1,31 @@
+{
+  "name": "fingard-ai",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "check-types": "turbo run check-types",
+    "check:migrations": "python scripts/check_migrations.py",
+    "check:etl-smoke": "python scripts/etl_smoke.py",
+    "check:phase6-readiness": "npm run check:migrations && npm run lint && npm run check-types && npm run check:etl-smoke"
+  },
+  "devDependencies": {
+    "prettier": "^3.7.4",
+    "turbo": "^2.9.6",
+    "typescript": "5.9.2"
+  },
+  "engines": {
+    "node": ">=18 <22"
+  },
+  "packageManager": "npm@10.9.2",
+  "workspaces": [
+    "apps/*",
+    "apps/mobile/*",
+    "packages/*"
+  ],
+  "dependencies": {
+    "@shopify/react-native-skia": "^2.6.3"
+  }
+}

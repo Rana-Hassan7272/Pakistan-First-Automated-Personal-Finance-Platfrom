@@ -1,0 +1,114 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+venv/
+.venv/
+.venv-airflow/
+
+# Local env files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Testing
+coverage
+
+# Turbo
+.turbo
+
+# Vercel
+.vercel
+
+# Build Outputs
+.next/
+out/
+build
+dist
+
+
+# Debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Misc
+.DS_Store
+*.pem
+
+# Windows reserved filename
+/nul
+
+backend/ml/mlruns/
+backend/ml/mlruns_bert/
+backend/ml/mlruns_lstm/
+
+backend/ml/bert/artifacts/
+backend/ml/lstm/artifacts/
+backend/ml/anomaly/artifacts/
+
+# Phase 9 RAG generated BM25 / temp indices (keep directory via .gitkeep)
+backend/rag/indices/*.pkl
+backend/rag/indices/*.tmp
+
+# Phase 9 RAG corpus PDFs (large binaries — do not commit; copy to workers / ingest machines locally)
+backend/rag/pdfdata/**/*.pdf
+
+# Python bytecode
+**/__pycache__/
+*.py[cod]
+
+mlruns/
+mlartifacts/
+
+data/processed/bert/
+
+# Model weights & large binaries
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.joblib
+*.h5
+*.onnx
+*.tflite
+
+# Mobile app - explicit paths (node_modules and .env already covered above)
+frontend/mobile/node_modules/
+frontend/mobile/.env
+frontend/mobile/.env.*
+frontend/mobile/ios/Pods/
+frontend/mobile/ios/build/
+frontend/mobile/android/.gradle/
+frontend/mobile/android/build/
+frontend/mobile/android/app/build/
+frontend/mobile/*.jks
+frontend/mobile/*.keystore
+
+# Expo / React Native build artifacts
+frontend/mobile/.expo/
+frontend/mobile/dist/
+frontend/mobile/web-build/
+*.ipa
+*.apk
+*.aab
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# OS files
+Thumbs.db
+ehthumbs.db
+Desktop.ini

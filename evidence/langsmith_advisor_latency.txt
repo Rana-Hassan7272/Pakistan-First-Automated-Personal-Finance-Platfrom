@@ -1,0 +1,10 @@
+FinGuard — LangSmith advisor traces (project: finguard-agents)
+Recorded: 2026-06-01 (user export from LangSmith UI); p50 updated June 2026
+
+p50 latency:  ~4 s
+p99 latency: 47.69 s
+
+Note: End-to-end multi-agent / advisor runs (not RAG-only eval).
+RAG eval mean latency is separate — see rag_eval_rerun/summary_*.json (~9–15 s per question with Gemini 10 RPM throttle).
+
+Optional for report: export 2–3 trace screenshots from LangSmith (routing + tools + RAG chunks).

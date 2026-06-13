@@ -1,0 +1,36 @@
+2026-06-01 20:58:37,820 INFO datasets: PyTorch version 2.2.2 available.
+2026-06-01 20:58:42,928 INFO httpx: HTTP Request: HEAD https://wuqjpuvefibyetxydogt.supabase.co/rest/v1/rag_documents?select=%2A "HTTP/2 200 OK"
+2026-06-01 20:58:43,505 INFO httpx: HTTP Request: HEAD https://wuqjpuvefibyetxydogt.supabase.co/rest/v1/rag_parent_chunks?select=%2A "HTTP/2 206 Partial Content"
+2026-06-01 20:58:45,173 INFO httpx: HTTP Request: HEAD https://wuqjpuvefibyetxydogt.supabase.co/rest/v1/rag_child_chunks?select=%2A "HTTP/2 206 Partial Content"
+2026-06-01 20:58:45,173 INFO backend.rag.embedder: Loading embedding model sentence-transformers/all-MiniLM-L6-v2 …
+2026-06-01 20:58:45,177 INFO sentence_transformers.SentenceTransformer: Use pytorch device_name: cpu
+2026-06-01 20:58:45,177 INFO sentence_transformers.SentenceTransformer: Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+2026-06-01 20:58:53,975 INFO httpx: HTTP Request: POST https://wuqjpuvefibyetxydogt.supabase.co/rest/v1/rpc/match_rag_child_chunks "HTTP/2 200 OK"
+{
+  "rag_documents": 102,
+  "rag_parent_chunks": 16474,
+  "rag_child_chunks": 69490,
+  "match_rpc": [
+    {
+      "child_chunk_id": "7684b512-6c57-4aae-8323-08a99883be7f",
+      "similarity": 0.725177786504561
+    },
+    {
+      "child_chunk_id": "e84cac36-e892-4f27-a716-ea805f964917",
+      "similarity": 0.723644955375491
+    },
+    {
+      "child_chunk_id": "b7117c60-689f-44b0-9462-1e5eb42f4c24",
+      "similarity": 0.714909195899963
+    },
+    {
+      "child_chunk_id": "8c874e92-b004-48f5-980e-289e6d436d0f",
+      "similarity": 0.703658777257278
+    },
+    {
+      "child_chunk_id": "bb6a0437-3acd-4501-a748-681885122888",
+      "similarity": 0.70215904712677
+    }
+  ]
+}
+=== finished 2026-06-01T20:58:56+05:00 exit=0 ===

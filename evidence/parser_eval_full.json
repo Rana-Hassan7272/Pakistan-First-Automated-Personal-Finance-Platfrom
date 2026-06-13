@@ -1,0 +1,395 @@
+{
+  "overall_stats": {
+    "total_samples": 235,
+    "passed_samples": 214,
+    "pass_rate": 91.06382978723404,
+    "timestamp": "2026-06-06T18:48:51.842473"
+  },
+  "provider_stats": {
+    "jazzcash": {
+      "sms": {
+        "total_samples": 18,
+        "passed_samples": 18,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 100.0,
+          "date_str": 100.0,
+          "time_str": 100.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      }
+    },
+    "askari": {
+      "sms": {
+        "total_samples": 7,
+        "passed_samples": 7,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 100.0,
+          "date_str": 100.0,
+          "time_str": 100.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      },
+      "notification": {
+        "total_samples": 3,
+        "passed_samples": 3,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 100.0,
+          "date_str": 100.0,
+          "time_str": 100.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      },
+      "pdf": {
+        "total_samples": 53,
+        "passed_samples": 50,
+        "pass_rate": 94.33962264150944,
+        "field_accuracy": {
+          "txn_type": 96.22641509433963,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 90.32258064516128,
+          "date_str": 100.0,
+          "time_str": 0.0
+        },
+        "direction_precision": 96.22641509433963,
+        "direction_recall": 96.22641509433963,
+        "direction_f1": 96.22641509433963
+      }
+    },
+    "easypaisa": {
+      "sms": {
+        "total_samples": 1,
+        "passed_samples": 1,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 100.0,
+          "date_str": 0.0,
+          "time_str": 0.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      },
+      "gmail": {
+        "total_samples": 7,
+        "passed_samples": 5,
+        "pass_rate": 71.42857142857143,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 50.0,
+          "date_str": 100.0,
+          "time_str": 100.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      },
+      "pdf": {
+        "total_samples": 30,
+        "passed_samples": 30,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 0.0,
+          "date_str": 100.0,
+          "time_str": 100.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      }
+    },
+    "allied": {
+      "gmail": {
+        "total_samples": 5,
+        "passed_samples": 0,
+        "pass_rate": 0.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 100.0,
+          "date_str": 100.0,
+          "time_str": 100.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      },
+      "pdf": {
+        "total_samples": 19,
+        "passed_samples": 19,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 0.0,
+          "date_str": 100.0,
+          "time_str": 0.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      },
+      "sms": {
+        "total_samples": 5,
+        "passed_samples": 5,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 100.0,
+          "date_str": 100.0,
+          "time_str": 100.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      }
+    },
+    "meezan": {
+      "gmail": {
+        "total_samples": 2,
+        "passed_samples": 0,
+        "pass_rate": 0.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 50.0,
+          "account_ref": 100.0,
+          "date_str": 0.0,
+          "time_str": 100.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      },
+      "sms": {
+        "total_samples": 2,
+        "passed_samples": 2,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 0.0,
+          "account_ref": 100.0,
+          "date_str": 100.0,
+          "time_str": 100.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      }
+    },
+    "ubl": {
+      "sms": {
+        "total_samples": 3,
+        "passed_samples": 1,
+        "pass_rate": 33.33333333333333,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 33.33333333333333,
+          "date_str": 33.33333333333333,
+          "time_str": 33.33333333333333
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      },
+      "gmail": {
+        "total_samples": 2,
+        "passed_samples": 2,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 100.0,
+          "date_str": 100.0,
+          "time_str": 100.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      },
+      "pdf": {
+        "total_samples": 9,
+        "passed_samples": 9,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 0.0,
+          "date_str": 100.0,
+          "time_str": 0.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      }
+    },
+    "hbl": {
+      "gmail": {
+        "total_samples": 1,
+        "passed_samples": 0,
+        "pass_rate": 0.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 0.0,
+          "account_ref": 100.0,
+          "date_str": 100.0,
+          "time_str": 100.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      },
+      "sms": {
+        "total_samples": 3,
+        "passed_samples": 3,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 0.0,
+          "account_ref": 100.0,
+          "date_str": 100.0,
+          "time_str": 100.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      },
+      "pdf": {
+        "total_samples": 9,
+        "passed_samples": 8,
+        "pass_rate": 88.88888888888889,
+        "field_accuracy": {
+          "txn_type": 100.0,
+          "amount": 100.0,
+          "counterparty": 100.0,
+          "account_ref": 0.0,
+          "date_str": 100.0,
+          "time_str": 0.0
+        },
+        "direction_precision": 100.0,
+        "direction_recall": 100.0,
+        "direction_f1": 100.0
+      }
+    },
+    "unknown": {
+      "gmail": {
+        "total_samples": 3,
+        "passed_samples": 2,
+        "pass_rate": 66.66666666666666,
+        "field_accuracy": {
+          "txn_type": 0.0,
+          "amount": 0.0,
+          "counterparty": 0.0,
+          "account_ref": 0.0,
+          "date_str": 0.0,
+          "time_str": 0.0
+        },
+        "direction_precision": 0.0,
+        "direction_recall": 0.0,
+        "direction_f1": 0.0
+      },
+      "ocr": {
+        "total_samples": 1,
+        "passed_samples": 1,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 0.0,
+          "amount": 0.0,
+          "counterparty": 0.0,
+          "account_ref": 0.0,
+          "date_str": 0.0,
+          "time_str": 0.0
+        },
+        "direction_precision": 0.0,
+        "direction_recall": 0.0,
+        "direction_f1": 0.0
+      },
+      "sms": {
+        "total_samples": 49,
+        "passed_samples": 47,
+        "pass_rate": 95.91836734693877,
+        "field_accuracy": {
+          "txn_type": 0.0,
+          "amount": 0.0,
+          "counterparty": 0.0,
+          "account_ref": 0.0,
+          "date_str": 0.0,
+          "time_str": 0.0
+        },
+        "direction_precision": 0.0,
+        "direction_recall": 0.0,
+        "direction_f1": 0.0
+      },
+      "notification": {
+        "total_samples": 2,
+        "passed_samples": 0,
+        "pass_rate": 0.0,
+        "field_accuracy": {
+          "txn_type": 0.0,
+          "amount": 0.0,
+          "counterparty": 0.0,
+          "account_ref": 0.0,
+          "date_str": 0.0,
+          "time_str": 0.0
+        },
+        "direction_precision": 0.0,
+        "direction_recall": 0.0,
+        "direction_f1": 0.0
+      },
+      "voice": {
+        "total_samples": 1,
+        "passed_samples": 1,
+        "pass_rate": 100.0,
+        "field_accuracy": {
+          "txn_type": 0.0,
+          "amount": 0.0,
+          "counterparty": 0.0,
+          "account_ref": 0.0,
+          "date_str": 0.0,
+          "time_str": 0.0
+        },
+        "direction_precision": 0.0,
+        "direction_recall": 0.0,
+        "direction_f1": 0.0
+      }
+    }
+  },
+  "detailed_results": []
+}

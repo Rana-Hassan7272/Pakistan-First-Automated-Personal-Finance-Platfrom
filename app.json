@@ -1,0 +1,12 @@
+{
+  "expo": {
+    "extra": {
+      "eas": {
+        "projectId": "cf37761c-2e78-4709-baa5-02a179780d2b"
+      }
+    },
+    "android": {
+      "package": "com.fsamra.fingardai"
+    }
+  }
+}

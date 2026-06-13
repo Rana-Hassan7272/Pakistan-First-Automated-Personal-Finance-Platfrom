@@ -1,0 +1,7 @@
+{
+  "config": "B",
+  "n": 40,
+  "success_rate": 1.0,
+  "latency_ms_mean": 9090.1,
+  "answer_gt_cosine_mean": 0.6628
+}

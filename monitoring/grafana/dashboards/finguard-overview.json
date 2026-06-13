@@ -1,0 +1,108 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "FinGuard AI - System Overview",
+    "tags": ["finguard", "overview"],
+    "timezone": "UTC",
+    "schemaVersion": 36,
+    "refresh": "10s",
+    "panels": [
+      {
+        "id": 1,
+        "title": "API Requests/sec",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "rate(http_requests_total[5m])",
+            "legendFormat": "{{method}} {{endpoint}}"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 0}
+      },
+      {
+        "id": 2,
+        "title": "API Response Time (p95)",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "histogram_quantile(0.95, rate(http_request_duration_seconds_bucket[5m]))",
+            "legendFormat": "p95"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 0}
+      },
+      {
+        "id": 3,
+        "title": "Active Users",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "active_users_total",
+            "legendFormat": "Active Users"
+          }
+        ],
+        "gridPos": {"h": 4, "w": 6, "x": 0, "y": 8}
+      },
+      {
+        "id": 4,
+        "title": "Celery Tasks/sec",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "rate(celery_task_total[5m])",
+            "legendFormat": "{{state}}"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 12}
+      },
+      {
+        "id": 5,
+        "title": "Redis Memory Usage",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "redis_memory_used_bytes",
+            "legendFormat": "Used"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 12}
+      },
+      {
+        "id": 6,
+        "title": "Elasticsearch Documents",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "elasticsearch_indices_docs_total",
+            "legendFormat": "Documents"
+          }
+        ],
+        "gridPos": {"h": 4, "w": 6, "x": 6, "y": 8}
+      },
+      {
+        "id": 7,
+        "title": "MLflow Experiments",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "mlflow_experiments_total",
+            "legendFormat": "Experiments"
+          }
+        ],
+        "gridPos": {"h": 4, "w": 6, "x": 12, "y": 8}
+      },
+      {
+        "id": 8,
+        "title": "RAG Cache Hit Rate",
+        "type": "gauge",
+        "targets": [
+          {
+            "expr": "rate(rag_cache_hits_total[5m]) / rate(rag_cache_requests_total[5m]) * 100",
+            "legendFormat": "Hit %"
+          }
+        ],
+        "gridPos": {"h": 4, "w": 6, "x": 18, "y": 8}
+      }
+    ]
+  }
+}

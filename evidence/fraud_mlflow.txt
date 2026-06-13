@@ -1,0 +1,6 @@
+INFO:backend.ml.mlflow_tracking:MLFLOW_TRACKING_URI is HTTP but server not reachable; using file store file:///C:/Users/PMY/Desktop/ARTIFICIAL%20INTELLIGENCE/MachineLearningProjects/finguard-ai/backend/ml/mlruns (unset MLFLOW_TRACKING_URI to silence, or start mlflow server on that URL).
+INFO:httpx:HTTP Request: GET https://wuqjpuvefibyetxydogt.supabase.co/rest/v1/categorization_feedback?select=suggested_category%2Ccategory_user_changed%2Ccategorization_layer%2Cstatus&status=eq.resolved_confirmed "HTTP/2 200 OK"
+INFO:httpx:HTTP Request: GET https://wuqjpuvefibyetxydogt.supabase.co/rest/v1/fraud_alerts?select=user_action%2Cis_resolved "HTTP/2 200 OK"
+INFO:httpx:HTTP Request: GET https://wuqjpuvefibyetxydogt.supabase.co/rest/v1/agent_run_logs?select=agent_type%2Cllm_call_count%2Ctool_call_count%2Clatency_ms%2Csuccess%2Cretried "HTTP/2 200 OK"
+INFO:__main__:Logged production MLflow snapshot run=production_weekly_20260601_17
+=== finished 2026-06-01T22:03:59+05:00 exit=0 ===

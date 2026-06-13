@@ -1,0 +1,56 @@
+
+FinGuard Phase 10 — Tool Chain Test Harness
+User ID : 77f69279-173c-4286-8f27-7f45d8d55f34
+Time    : 2026-06-01T17:10:47.622395+00:00
+
+=======================================================
+  Scenario: Expense Analysis Flow
+=======================================================
+  [[92m PASS[0m] database transactions — rows=30
+  [[92m PASS[0m] database spending_summary — categories=6
+  [[92m PASS[0m] lstm food_dining — trend=unknown, source=live_inference
+  [[92m PASS[0m] computation budget_projection — projected=9119020
+
+=======================================================
+  Scenario: Investment Advice Flow
+=======================================================
+  [[92m PASS[0m] database user_profile — income_level=unknown
+  [[92m PASS[0m] database spending_summary
+  [[92m PASS[0m] computation savings_rate — rate=8.81%
+  [[92m PASS[0m] database accounts — accounts=2
+  [[92m PASS[0m] computation emergency_fund_months — months=0.0
+  [[92m PASS[0m] computation investable_surplus — surplus=0
+  [[92m PASS[0m] rag halal investment — chunks=3
+
+=======================================================
+  Scenario: Zakat Calculation Flow
+=======================================================
+  [[92m PASS[0m] database zakat_records — records=0
+  [[92m PASS[0m] database accounts
+  [[92m PASS[0m] database investments — holdings=0
+  [[92m PASS[0m] computation zakat — due=0 paisa, eligible=False
+  [[92m PASS[0m] rag zakat guidance — confidence=0.735
+
+=======================================================
+  Scenario: Fraud Query Flow
+=======================================================
+  [[92m PASS[0m] database fraud_alerts — pending=0
+  [[92m PASS[0m] fraud_context_tool (no alerts) — warning=no_pending_fraud_alerts_found
+  [[92m PASS[0m] database transactions baseline — rows=30
+
+=======================================================
+  Scenario: Budget Advice Flow
+=======================================================
+  [[92m PASS[0m] database budgets — budgets=0
+  [[92m PASS[0m] lstm all categories — predictions=21
+  [[92m PASS[0m] computation budget_projection (fallback) — projected=4000000
+  [[92m PASS[0m] rag budget strategy
+
+=======================================================
+  Results: 5/5 scenarios passed
+  Tool calls made : 25
+  Avg latency     : 749.06 ms
+  Failed calls    : 3
+=======================================================
+
+  All scenarios pass. Ready to build agents.

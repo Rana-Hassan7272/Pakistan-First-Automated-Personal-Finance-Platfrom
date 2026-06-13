@@ -1,0 +1,140 @@
+# FinGuard AI - Full Production Stack
+# Run: docker-compose up -d
+# Stop: docker-compose down
+# Logs: docker-compose logs -f [service_name]
+
+services:
+  # ==========================================
+  # Core Backend Services
+  # ==========================================
+  
+  # FastAPI Backend
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        HF_ML_REPO_ID: ${HF_ML_REPO_ID:-hassan7272/finguard-ml}
+    container_name: finguard-api
+    ports:
+      - "8000:8000"
+    environment:
+      # Supabase
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_ANON_KEY=${SUPABASE_ANON_KEY}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+      - SUPABASE_JWT_SECRET=${SUPABASE_JWT_SECRET}
+      
+      # AI/ML Keys
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      
+      # Redis (use service name)
+      - REDIS_URL=redis://redis:6379/0
+      
+      # Elasticsearch
+      
+      # RAG
+      - FINGUARD_RAG_MOCK=0
+      - RAG_CACHE_ENABLED=true
+      - RAG_CACHE_TTL_SECONDS=3600
+      
+      # Rate Limiting
+      - RATE_LIMIT_ENABLED=true
+      - RATE_LIMIT_REQUESTS=20
+      
+      # Offline Queue
+      - OFFLINE_QUEUE_ENABLED=true
+      
+      # Celery
+      - CELERY_BROKER_URL=redis://redis:6379/1
+      - CELERY_RESULT_BACKEND=redis://redis:6379/2
+      - FINGUARD_SERVICE_ROLE=api
+      - FINGUARD_SYNC_ML_ON_START=0
+      
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    volumes:
+      - ./logs:/app/logs
+      - ./models:/app/models:ro
+    networks:
+      - finguard-network
+    restart: unless-stopped
+    command: sh scripts/start-api-only.sh
+
+  # Celery Worker (background tasks)
+  celery-worker:
+    image: finguard-ai-api
+    container_name: finguard-celery-worker
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/1
+      - CELERY_RESULT_BACKEND=redis://redis:6379/2
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+      - FINGUARD_SERVICE_ROLE=worker
+      - FINGUARD_SYNC_ML_ON_START=0
+      - FINGUARD_DEFER_PREWARM=1
+      - FINGUARD_REPO_ROOT=/app
+    env_file:
+      - .env
+    depends_on:
+      - redis
+    volumes:
+      - ./logs:/app/logs
+      - ./models:/app/models:ro
+    networks:
+      - finguard-network
+    restart: unless-stopped
+    command: sh scripts/start-worker-only.sh
+
+  # Celery Beat (scheduler)
+  celery-beat:
+    image: finguard-ai-api  # reuse api image
+    container_name: finguard-celery-beat
+    environment:
+      - SUPABASE_URL=${SUPABASE_URL}
+      - SUPABASE_SERVICE_ROLE_KEY=${SUPABASE_SERVICE_ROLE_KEY}
+      - REDIS_URL=redis://redis:6379/0
+      - CELERY_BROKER_URL=redis://redis:6379/1
+      - CELERY_RESULT_BACKEND=redis://redis:6379/2
+      - GROQ_API_KEY=${GROQ_API_KEY}
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+      - OPENROUTER_API_KEY=${OPENROUTER_API_KEY}
+    env_file:
+      - .env
+    depends_on:
+      - redis
+      - celery-worker
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - finguard-network
+    restart: unless-stopped
+    command: celery -A backend.etl.worker_app beat --loglevel=info --scheduler celery.beat.PersistentScheduler
+
+  # Redis (Cache + Message Broker)
+  redis:
+    image: redis:7-alpine
+    container_name: finguard-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis-data:/data
+    networks:
+      - finguard-network
+    restart: unless-stopped
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+
+networks:
+  finguard-network:
+    driver: bridge
+
+volumes:
+  redis-data:

@@ -1,0 +1,38 @@
+# fetched 2026-06-01T18:33:42.094037+00:00
+# HTTP 200
+# host http://127.0.0.1:8000
+
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 2039.0
+python_gc_objects_collected_total{generation="1"} 655.0
+python_gc_objects_collected_total{generation="2"} 26.0
+# HELP python_gc_objects_uncollectable_total Uncollectable objects found during GC
+# TYPE python_gc_objects_uncollectable_total counter
+python_gc_objects_uncollectable_total{generation="0"} 0.0
+python_gc_objects_uncollectable_total{generation="1"} 0.0
+python_gc_objects_uncollectable_total{generation="2"} 0.0
+# HELP python_gc_collections_total Number of times this generation was collected
+# TYPE python_gc_collections_total counter
+python_gc_collections_total{generation="0"} 362.0
+python_gc_collections_total{generation="1"} 32.0
+python_gc_collections_total{generation="2"} 2.0
+# HELP python_info Python platform information
+# TYPE python_info gauge
+python_info{implementation="CPython",major="3",minor="12",patchlevel="7",version="3.12.7"} 1.0
+# HELP finguard_finguard_tasks_running Number of tasks currently in 'running' status by task type
+# TYPE finguard_finguard_tasks_running gauge
+# HELP finguard_finguard_tasks_queue_time_seconds Average queue-to-completion time in seconds
+# TYPE finguard_finguard_tasks_queue_time_seconds gauge
+# HELP finguard_finguard_gmail_prefilter_rejection_rate Percentage of emails rejected at Gmail metadata pre-filter stage
+# TYPE finguard_finguard_gmail_prefilter_rejection_rate gauge
+finguard_finguard_gmail_prefilter_rejection_rate 0.0
+# HELP finguard_finguard_etl_circuit_breaker_total Total number of ETL circuit breaker trips
+# TYPE finguard_finguard_etl_circuit_breaker_total counter
+# HELP finguard_finguard_ocr_model_load_seconds Time taken to load OCR model on worker startup
+# TYPE finguard_finguard_ocr_model_load_seconds gauge
+finguard_finguard_ocr_model_load_seconds 0.0
+# HELP finguard_finguard_dlq_size Number of records in dead letter queue by source
+# TYPE finguard_finguard_dlq_size gauge
+# HELP finguard_finguard_task_completion_rate Task completion rate (0-1) by task type
+# TYPE finguard_finguard_task_completion_rate gauge

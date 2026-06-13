@@ -1,0 +1,365 @@
+{
+  "dashboard": {
+    "title": "FinGuard Task Queue Health - Phase 11",
+    "tags": ["finguard", "phase11", "celery", "tasks", "queue"],
+    "timezone": "UTC",
+    "schemaVersion": 36,
+    "refresh": "10s",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Tasks Running by Type",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "finguard_tasks_running",
+            "legendFormat": "{{task_type}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "thresholds": {
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "yellow",
+                  "value": 5
+                },
+                {
+                  "color": "red",
+                  "value": 10
+                }
+              ]
+            }
+          }
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 6,
+          "x": 0,
+          "y": 0
+        },
+        "description": "Number of tasks currently in 'running' status by task type (gmail_sync, pdf_ocr, etl, fraud_score)"
+      },
+      {
+        "id": 2,
+        "title": "Average Queue-to-Completion Time",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "finguard_tasks_queue_time_seconds",
+            "legendFormat": "{{task_type}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s",
+            "min": 0,
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "yellow",
+                  "value": 60
+                },
+                {
+                  "color": "red",
+                  "value": 300
+                }
+              ]
+            }
+          }
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 9,
+          "x": 6,
+          "y": 0
+        },
+        "description": "Average time from task creation to completion in seconds"
+      },
+      {
+        "id": 3,
+        "title": "DLQ Size Trend",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "finguard_dlq_size",
+            "legendFormat": "{{source}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "min": 0,
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "yellow",
+                  "value": 10
+                },
+                {
+                  "color": "red",
+                  "value": 50
+                }
+              ]
+            }
+          }
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 9,
+          "x": 15,
+          "y": 0
+        },
+        "description": "Number of records in dead letter queue by source (etl_prevalidation, etl_circuit_breaker, gmail_batch)"
+      },
+      {
+        "id": 4,
+        "title": "Gmail Pre-filter Rejection Rate",
+        "type": "gauge",
+        "targets": [
+          {
+            "expr": "finguard_gmail_prefilter_rejection_rate",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percent",
+            "min": 0,
+            "max": 100,
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "steps": [
+                {
+                  "color": "red",
+                  "value": 0
+                },
+                {
+                  "color": "yellow",
+                  "value": 40
+                },
+                {
+                  "color": "green",
+                  "value": 60
+                }
+              ]
+            }
+          }
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 6,
+          "x": 0,
+          "y": 8
+        },
+        "description": "Percentage of emails rejected at Gmail metadata pre-filter stage (saves ~60% API calls)"
+      },
+      {
+        "id": 5,
+        "title": "Circuit Breaker Trips / Day",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "increase(finguard_etl_circuit_breaker_total[1d])",
+            "legendFormat": "{{batch_id}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "min": 0,
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "yellow",
+                  "value": 1
+                },
+                {
+                  "color": "red",
+                  "value": 5
+                }
+              ]
+            }
+          }
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 9,
+          "x": 6,
+          "y": 8
+        },
+        "description": "Number of ETL circuit breaker trips per day (indicates batch failure cascades)"
+      },
+      {
+        "id": 6,
+        "title": "Task Completion Rate (24h)",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "finguard_task_completion_rate",
+            "legendFormat": "{{task_type}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "percentunit",
+            "min": 0,
+            "max": 1,
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "steps": [
+                {
+                  "color": "red",
+                  "value": 0
+                },
+                {
+                  "color": "yellow",
+                  "value": 0.8
+                },
+                {
+                  "color": "green",
+                  "value": 0.95
+                }
+              ]
+            }
+          }
+        },
+        "gridPos": {
+          "h": 7,
+          "w": 9,
+          "x": 15,
+          "y": 8
+        },
+        "description": "Percentage of tasks completed successfully (vs failed/partial_complete) in last 24h"
+      },
+      {
+        "id": 7,
+        "title": "OCR Model Load Time",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "finguard_ocr_model_load_seconds",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "unit": "s",
+            "min": 0,
+            "color": {
+              "mode": "thresholds"
+            },
+            "thresholds": {
+              "steps": [
+                {
+                  "color": "green",
+                  "value": 0
+                },
+                {
+                  "color": "yellow",
+                  "value": 10
+                },
+                {
+                  "color": "red",
+                  "value": 30
+                }
+              ]
+            }
+          }
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 6,
+          "x": 0,
+          "y": 15
+        },
+        "description": "Time taken to load OCR model on worker startup (Phase 11 pre-warm)"
+      },
+      {
+        "id": 8,
+        "title": "Active Tasks Timeline",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "finguard_tasks_running",
+            "legendFormat": "{{task_type}}",
+            "refId": "A"
+          }
+        ],
+        "fieldConfig": {
+          "defaults": {
+            "min": 0,
+            "custom": {
+              "drawStyle": "line",
+              "lineInterpolation": "linear",
+              "showPoints": "auto",
+              "spanNulls": false
+            }
+          }
+        },
+        "gridPos": {
+          "h": 5,
+          "w": 18,
+          "x": 6,
+          "y": 15
+        },
+        "description": "Timeline of active tasks by type over time"
+      }
+    ],
+    "time": {
+      "from": "now-6h",
+      "to": "now"
+    },
+    "templating": {
+      "list": []
+    },
+    "annotations": {
+      "list": [
+        {
+          "name": "Circuit Breaker Events",
+          "datasource": "Prometheus",
+          "expr": "finguard_etl_circuit_breaker_total",
+          "tagKeys": "batch_id",
+          "textFormat": "Circuit breaker tripped for {{batch_id}}",
+          "iconColor": "red",
+          "enable": true
+        }
+      ]
+    }
+  }
+}

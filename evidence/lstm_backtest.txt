@@ -1,0 +1,27 @@
+Backtest status: completed
+Retrain recommended: True
+Categories needing retrain: ['charity_donations']
+
+Per-category MAE%:
+  food_dining                     MAE%=9.01%
+  grocery                         MAE%=11.31%
+  utilities                       MAE%=8.52%
+  mobile_internet                 MAE%=6.18%
+  transport_fuel                  MAE%=11.70%
+  travel                          MAE%=8.00%
+  entertainment                   MAE%=10.79%
+  health_fitness                  MAE%=8.47%
+  social_events                   MAE%=9.53%
+  shopping_general                MAE%=10.35%
+  clothing_footwear               MAE%=18.00%
+  electronics_gadgets             MAE%=8.29%
+  healthcare_pharmacy             MAE%=7.62%
+  education                       MAE%=8.01%
+  cash_withdrawal                 MAE%=11.42%
+  transfers                       MAE%=14.96%
+  income_salary                   MAE%=7.25%
+  bills_government                MAE%=7.49%
+  investments                     MAE%=7.86%
+  charity_donations               MAE%=26.67% *** RETRAIN
+  subscriptions                   MAE%=7.18%
+=== finished 2026-06-01T21:32:17+05:00 ===

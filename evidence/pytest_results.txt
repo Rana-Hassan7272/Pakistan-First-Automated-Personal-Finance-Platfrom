@@ -1,0 +1,104 @@
+........................................................................ [ 23%]
+........................................................................ [ 47%]
+................................................F....................... [ 70%]
+........................................................................ [ 94%]
+.......s..........                                                       [100%]
+============================== warnings summary ===============================
+backend/tests/test_normalizer_merchant_domain.py::test_orion_funworld_not_personal_transfer
+backend/tests/test_normalizer_merchant_domain.py::test_hbl_credit_card_body_does_not_trigger_mobile_topup
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_passes_jwt_sub_to_call_rag
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_passes_jwt_sub_to_call_rag
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_passes_jwt_sub_to_call_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\supabase\_sync\client.py:309: DeprecationWarning: The 'timeout' parameter is deprecated. Please configure it in the http client instead.
+    return SyncPostgrestClient(
+
+backend/tests/test_normalizer_merchant_domain.py::test_orion_funworld_not_personal_transfer
+backend/tests/test_normalizer_merchant_domain.py::test_hbl_credit_card_body_does_not_trigger_mobile_topup
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_passes_jwt_sub_to_call_rag
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_passes_jwt_sub_to_call_rag
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_passes_jwt_sub_to_call_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\supabase\_sync\client.py:309: DeprecationWarning: The 'verify' parameter is deprecated. Please configure it in the http client instead.
+    return SyncPostgrestClient(
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  <frozen importlib._bootstrap>:488: DeprecationWarning: Type google._upb._message.MessageMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14.
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  <frozen importlib._bootstrap>:488: DeprecationWarning: Type google._upb._message.ScalarMapContainer uses PyType_Spec with a metaclass that has custom tp_new. This is deprecated and will no longer be allowed in Python 3.14.
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:64: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("togetherai_api_key", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:78: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("cohere_api_key", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:86: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("ai21labs_api_key", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:95: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("mosaicml_api_key", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:125: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("openai_api_key", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:182: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("anthropic_api_key", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:190: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("palm_api_key", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:230: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("mistral_api_key", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:284: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("provider", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:311: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("config", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:351: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("name")
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:361: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("model", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:372: PydanticDeprecatedSince20: Pydantic V1 style `@root_validator` validators are deprecated. You should migrate to Pydantic V2 style `@model_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @root_validator(skip_on_failure=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:394: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("route_type", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\mlflow\gateway\config.py:400: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    @validator("limit", pre=True)
+
+tests/test_rag_api_phase9.py::test_advisor_chat_rag_only_streams_and_calls_rag
+  C:\Users\PMY\Desktop\ARTIFICIAL INTELLIGENCE\MachineLearningProjects\finguard-ai\venv\Lib\site-packages\pydantic\_internal\_config.py:323: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.11/migration/
+    warnings.warn(DEPRECATION_MESSAGE, DeprecationWarning)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED backend/tests/test_normalizer_merchant_domain.py::test_electronics_merchant_not_classified_as_transfer
+1 failed, 304 passed, 1 skipped, 34 warnings in 54.82s
+
+=== finished 2026-06-01T20:53:02+05:00 exit=0 ===

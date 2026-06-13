@@ -1,0 +1,10 @@
+FinGuard advisor POST /api/v1/advisor/chat latency smoke
+Recorded: 2026-06-01T18:39:13.700468+00:00
+host=http://127.0.0.1:8000  n_ok=10/10
+
+p50: 2013.86 ms
+p95: 25436.35 ms
+p99: 40700.01 ms
+mean: 6266.55 ms
+
+json: {"timestamp": "2026-06-01T18:39:13.700468+00:00", "host": "http://127.0.0.1:8000", "n_ok": 10, "n_total": 10, "http_codes": [200, 200, 200, 200, 200, 200, 200, 200, 200, 200], "latency_ms": {"p50": 2013.86, "p95": 25436.35, "p99": 40700.01, "mean": 6266.55, "min": 1962.09, "max": 44515.92}}

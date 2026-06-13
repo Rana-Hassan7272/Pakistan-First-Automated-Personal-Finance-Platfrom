@@ -1,0 +1,21 @@
+LSTM backtest — charity_donations retrain flag (2026-06-01)
+
+Source: evidence/lstm_backtest.txt
+Threshold: MAE% > 25% triggers retrain_recommended
+
+Result:
+  charity_donations  MAE% = 26.67%  *** RETRAIN
+  All other 20 categories: MAE% 6.2% – 18.0% (within threshold)
+
+Meaning:
+  The production LSTM checkpoint still runs; backtest only flags this category
+  for optional fine-tune / retrain on next scheduled training — not a deploy blocker.
+
+Optional retrain (long-running, training laptop):
+  export PYTHONPATH=.
+  python -m backend.ml.lstm.run_pipeline train
+
+After retrain, re-run backtest:
+  python -m backend.ml.lstm.run_pipeline backtest 2>&1 | tee evidence/lstm_backtest_after_retrain.txt
+
+For FYP: cite lstm_backtest.txt — "20/21 categories within 25% MAE; charity_donations flagged for future retrain."

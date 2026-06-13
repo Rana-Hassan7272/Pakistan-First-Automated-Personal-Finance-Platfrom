@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-06-11T23:25:27.909241+00:00",
+  "mode": "api",
+  "host": "http://127.0.0.1:8000",
+  "user_id": "69c99214-f7d0-45f1-a7f3-cf66499a1958",
+  "n_per_scenario": 20,
+  "warmup": 1,
+  "scenarios": {
+    "fast_spending": {
+      "message": "how much did I spend this month",
+      "n_ok": 0,
+      "n_requested": 20,
+      "warmup": 1,
+      "errors": [
+        "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>",
+        "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>",
+        "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>",
+        "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>",
+        "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>",
+        "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>",
+        "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>",
+        "<urlopen error [WinError 10061] No connection could be made because the target machine actively refused it>"
+      ]
+    }
+  }
+}

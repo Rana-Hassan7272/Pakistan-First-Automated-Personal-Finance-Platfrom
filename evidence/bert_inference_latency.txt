@@ -1,0 +1,11 @@
+FinGuard BERT inference latency (layer 7 forward pass)
+Recorded: 2026-06-01T18:32:17.716707+00:00
+n=50  checkpoint=backend/ml/bert/artifacts/bert_txn_production
+
+p50: 99.87 ms
+p95: 270.0 ms
+p99: 5015.4 ms
+mean: 302.02 ms
+min: 83.68 ms  max: 9387.18 ms
+
+json: {"timestamp": "2026-06-01T18:32:17.716707+00:00", "n": 50, "checkpoint": "backend/ml/bert/artifacts/bert_txn_production", "latency_ms": {"min": 83.68, "mean": 302.02, "p50": 99.87, "p95": 270.0, "p99": 5015.4, "max": 9387.18}}
